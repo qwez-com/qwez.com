@@ -12,17 +12,49 @@
             align-items: center;
             justify-content: center;
             font-family: 'Avenir Next', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+
+        p {
+            position: relative;
+            overflow-x: hidden;
         }
 
         a {
             color: black;
+            text-decoration: none;
+        }
+
+        a:after {
+            content: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+            font-family: "Courier New", monospace;
+            font-size: 16px;
+            color: transparent;
+            position: absolute;
+            left: 0;
             text-decoration-style: wavy;
             text-decoration-line: underline;
             text-decoration-color: darkmagenta;
         }
+
+        a:hover:after {
+            text-decoration-color: magenta;
+            animation: animate 0.1s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -6px;
+            }
+        }
+
     </style>
 </head>
 <body>
-<a href="https://www.afternic.com/domain/qwez.com">Buy this domain now</a>
+<p><a href="https://www.afternic.com/domain/qwez.com">Buy this domain now</a></p>
 </body>
 </html>
